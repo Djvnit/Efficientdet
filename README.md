@@ -31,18 +31,22 @@ mkdir data
   │   ├── instances_train2017.json
   │   └── instances_val2017.json
   │── images
-      ├── train2017
+      ├── train2017 
       └── val2017
+      └── test2017
+
   ```
   
 ## How to use our code
 
 With our code, you can:
-
-* **Train your model** by running **python train.py**
+[Download train2017](https://www.kaggle.com/jipingsun/object-detection-obama)
+Just copy the images in train2017 and paste in the train2017 directory of this repository and you are all set to train and test the model to recognize obama. [cheers!!!]
+* **Train your model** by running **python main.py** 
 * **Evaluate mAP for COCO dataset** by running **python mAP_evaluation.py**
-* **Test your model for COCO dataset** by running **python test_dataset.py --pretrained_model path/to/trained_model**
-* **Test your model for video** by running **python test_video.py --pretrained_model path/to/trained_model --input path/to/input/file --output path/to/output/file**
+* **Test your model for COCO dataset** by running **python main.py**
+* **Test your model for video** by running **python main.py**
+* **You can change almost the important parameters of model and do experimentation using config.ini file** and then comment the lines in main.py file to do the tasks accordingly **python main.py**
 
 ## Experiments
 
@@ -91,9 +95,9 @@ Some predictions are shown below:
 
 ## Citation
 
-    @article{EfficientDetSignatrix,
-        Author = {Signatrix GmbH},
+    @article{EfficientDet,
+        Author = {Deepak},
         Title = {A Pytorch Implementation of EfficientDet Object Detection},
-        Journal = {https://github.com/signatrix/efficientdet},
+        Reference = {https://github.com/signatrix/efficientdet},
         Year = {2020}
     }
