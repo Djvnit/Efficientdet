@@ -198,7 +198,7 @@ class EfficientNet(nn.Module):
 
 
 class EfficientDet(nn.Module):
-    def __init__(self, num_anchors=9, num_classes=20, compound_coef=0):
+    def __init__(self, num_anchors=9, num_classes=1, compound_coef=0):
         super(EfficientDet, self).__init__()
         self.compound_coef = compound_coef
 
@@ -298,5 +298,5 @@ if __name__ == '__main__':
     def count_parameters(model):
         return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-    model = EfficientDet(num_classes=80)
+    model = EfficientDet(num_classes=1)
     print (count_parameters(model))
